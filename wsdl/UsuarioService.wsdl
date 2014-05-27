@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="UsuarioService" targetNamespace="http://lextouch-rfiscal.rhcloud.com/Usuario" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://lextouch-rfiscal.rhcloud.com/Usuario" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://lextouch-rfiscal.rhcloud.com/Usuario" schemaLocation="UsuarioService_schema1.xsd" />
+</schema>
+  </wsdl:types>
+  <wsdl:message name="setNombreResponse">
+    <wsdl:part name="parameters" element="tns:setNombreResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setEmailResponse">
+    <wsdl:part name="parameters" element="tns:setEmailResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUsuario">
+    <wsdl:part name="parameters" element="tns:getUsuario">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setUsuario">
+    <wsdl:part name="parameters" element="tns:setUsuario">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getNombreResponse">
+    <wsdl:part name="parameters" element="tns:getNombreResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setUsuarioResponse">
+    <wsdl:part name="parameters" element="tns:setUsuarioResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getNombre">
+    <wsdl:part name="parameters" element="tns:getNombre">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEmail">
+    <wsdl:part name="parameters" element="tns:getEmail">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUsuarioResponse">
+    <wsdl:part name="parameters" element="tns:getUsuarioResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="buscarPorId">
+    <wsdl:part name="parameters" element="tns:buscarPorId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="buscarPorIdResponse">
+    <wsdl:part name="parameters" element="tns:buscarPorIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setNombre">
+    <wsdl:part name="parameters" element="tns:setNombre">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEmailResponse">
+    <wsdl:part name="parameters" element="tns:getEmailResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setEmail">
+    <wsdl:part name="parameters" element="tns:setEmail">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Usuario">
+    <wsdl:operation name="buscarPorId">
+      <wsdl:input name="buscarPorId" message="tns:buscarPorId">
+    </wsdl:input>
+      <wsdl:output name="buscarPorIdResponse" message="tns:buscarPorIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setUsuario">
+      <wsdl:input name="setUsuario" message="tns:setUsuario">
+    </wsdl:input>
+      <wsdl:output name="setUsuarioResponse" message="tns:setUsuarioResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNombre">
+      <wsdl:input name="getNombre" message="tns:getNombre">
+    </wsdl:input>
+      <wsdl:output name="getNombreResponse" message="tns:getNombreResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmail">
+      <wsdl:input name="getEmail" message="tns:getEmail">
+    </wsdl:input>
+      <wsdl:output name="getEmailResponse" message="tns:getEmailResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setEmail">
+      <wsdl:input name="setEmail" message="tns:setEmail">
+    </wsdl:input>
+      <wsdl:output name="setEmailResponse" message="tns:setEmailResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUsuario">
+      <wsdl:input name="getUsuario" message="tns:getUsuario">
+    </wsdl:input>
+      <wsdl:output name="getUsuarioResponse" message="tns:getUsuarioResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setNombre">
+      <wsdl:input name="setNombre" message="tns:setNombre">
+    </wsdl:input>
+      <wsdl:output name="setNombreResponse" message="tns:setNombreResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UsuarioServiceSoapBinding" type="tns:Usuario">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="buscarPorId">
+      <soap:operation soapAction="http://lextouch-rfiscal.rhcloud.com/Usuario/buscarPorId" style="document"/>
+      <wsdl:input name="buscarPorId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="buscarPorIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmail">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getEmail">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getEmailResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNombre">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getNombre">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getNombreResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setUsuario">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="setUsuario">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setUsuarioResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUsuario">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getUsuario">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getUsuarioResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setEmail">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="setEmail">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setEmailResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setNombre">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="setNombre">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setNombreResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UsuarioService">
+    <wsdl:port name="UsuarioPort" binding="tns:UsuarioServiceSoapBinding">
+      <soap:address location="http://localhost:9090/UsuarioPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
