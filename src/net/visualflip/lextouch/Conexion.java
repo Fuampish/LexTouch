@@ -8,7 +8,7 @@ public class Conexion {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			String url = "jdbc:mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/lextouch";
-			c = DriverManager.getConnection(url,"adminl2pTaQ5","I8j1YdFEdDUY");
+			c = DriverManager.getConnection(url,"adminnLnmxWA","Hxnw3aYz-g3W");
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
